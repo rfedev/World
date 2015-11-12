@@ -1,35 +1,21 @@
 package com.sims.rfe.world.Objects.Source;
 
-import com.sims.rfe.world.Objects.WorldObject;
+import com.sims.rfe.world.Objects.Tools.Tool;
 
 /**
  * Source for Logs
  */
-public class Tree implements WorldObject {
+public class Tree extends Source {
 
-    private String name;
-    private int id;
+    private int logAmount;
+    private int fruitAmount;
 
     public Tree(int id) {
-        this.id = id;
-        this.name = "Tree";
+        super("Tree", id);
     }
 
     @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public boolean interact() {
-
-
-
+    public boolean getResource(String type, Tool tool) {
         return false;
     }
 }
